@@ -44,6 +44,8 @@ class Twitter():
             session.commit()
         except:
             session.rollback()
+        finally:
+            session.close()
 
     def display_menu(self):
         print '\n\nMENU\n=========\n\n'
