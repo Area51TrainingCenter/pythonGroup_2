@@ -1,0 +1,15 @@
+{% for comment in comments %}
+<div><strong>{{ comment.full_name }}</strong></div>
+<div>{{ comment.message }}</div>
+{% endfor %}
+
+<form method="post">
+{% csrf_token %}
+<label for="full_name">Nombre completo:</label>
+<input type="textfield" name="full_name" id="full_name" />
+<label for="email">E-mail</label>
+<input type="textfield" name="email" id="email" />
+<label for="message">Mensaje:</label>
+<textarea name="message" id="message"></textarea>
+<input type="submit" value="enviar" />
+</form>
