@@ -1,0 +1,7 @@
+<h1>{{ name }}</h1>
+
+<p>Contenido:</p>
+<form action="{{ url_for('edicion', name=name) }}" method="POST">
+<textarea name="body">{{ wiki.body }}</textarea>
+<input type="submit" value="enviar" />
+</form>

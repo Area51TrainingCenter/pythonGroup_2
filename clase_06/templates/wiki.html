@@ -1,0 +1,8 @@
+<h1>{{ name }}</h1>
+{% if wiki %}
+<p>{{ wiki.body }}</p>
+{% else %}
+<p>Esta p&aacute;gina no existe</p>
+{% endif %}
+
+<a href="{{ url_for('edicion', name=name) }}">Editar</a>

@@ -1,0 +1,16 @@
+<h1>{{ name }}</h1>
+
+<form action="{{ url_for('plantilla', name=name) }}" method="POST">
+{% if lista %}
+<ul>
+{% for item in lista %}
+<li><input type="checkbox" name="items" value="{{ item.id }}" {% if item.done %}checked{% endif %} />{{ item.name }}</li>
+{% endfor %}
+</ul>
+{% else %}
+<p>No tienes items en tu lista</p>
+{% endif %}
+
+<input type="textfield" name="new_item" value=""/>
+<input type="submit" value="enviar" />
+</form>
