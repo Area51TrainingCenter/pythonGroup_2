@@ -1,0 +1,6 @@
+{% if entry %}
+<p>{{ entry.body }}</p>
+{% endif %}
+
+<p><a href="{{ handler.reverse_url('index') }}">Inicio</a></p>
+<p><a href="{{ handler.reverse_url('edit', uri) }}">Editar</a></p>

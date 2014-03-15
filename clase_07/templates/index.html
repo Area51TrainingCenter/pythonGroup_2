@@ -1,0 +1,5 @@
+<h1>HOLA MUNDO!</h1>
+
+{% for entry in entries %}
+<p><a href="{{ handler.reverse_url('detalle', entry.uri) }}">/detalle/{{ entry.uri }}</a></p>
+{% endfor %}

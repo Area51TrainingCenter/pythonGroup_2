@@ -1,0 +1,10 @@
+<h1>Editar</h1>
+<form method="POST">
+    {{ handler.xsrf_form_html() }}
+    <textarea name="body">
+        {% if entry %}
+        {{ entry.body }}
+        {% endif %}
+    </textarea>
+    <input type="submit" value="enviar"/>
+</form>
